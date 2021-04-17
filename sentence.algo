@@ -1,0 +1,46 @@
+ALGORITHM SENTENCE_ANALYSIS
+
+    VAR sentence : STRING;
+    VAR total_length, nb_words, nb_voyels : INTEGER := 0;
+    VAR i : INTEGER := 1;
+
+BEGIN
+
+    Write("Write a sentence");
+    Read(sentence);
+
+    WHILE (sentence[i] <> "") DO
+
+    total_length := total_length + 1;
+
+    IF (sentence[i] = " ") THEN
+        nb_words := nb_words + 1;
+    END_IF
+
+    SWITCH (sentence[i]) DO
+        case "a" : nb_voyels := nb_voyels + 1; BREAK;
+        case "e" : nb_voyels := nb_voyels + 1; BREAK;
+        case "i" : nb_voyels := nb_voyels + 1; BREAK;
+        case "o" : nb_voyels := nb_voyels + 1; BREAK;
+        case "u" : nb_voyels := nb_voyels + 1; BREAK;
+        case "y" : nb_voyels := nb_voyels + 1; BREAK;
+        default : nb_voyels := nb_voyels;
+    END_SWITCH
+    
+    END_WHILE
+
+    IF (sentence = "") THEN
+        nb_words := 0;
+        total_length := 0;
+    ELSE
+        nb_words := nb_words + 1;
+        total_length := total_length - (nb_words - 1)
+    END_IF
+
+    write("La phrase a un longueur de " + total_length + " caractères, contient " + nb_words + " mots et " + nb_voyels + " voyelles.");
+
+END
+
+
+
+
