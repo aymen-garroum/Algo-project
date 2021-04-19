@@ -2,7 +2,7 @@ ALGORITHM SENTENCE_ANALYSIS
 
     VAR sentence : STRING;
     VAR total_length, nb_words, nb_voyels : INTEGER := 0;
-    VAR i : INTEGER := 1;
+    VAR i : INTEGER := 0;
 
 BEGIN
 
